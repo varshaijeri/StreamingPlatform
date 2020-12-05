@@ -11,7 +11,7 @@
           src="https://image.tmdb.org/t/p/original{{trend[0].backdrop_path}}" data-holder-rendered="true">
         <div class="carousel-caption d-none d-md-block">
           <h5>{{trend[0].original_title}}</h5>
-          <button class="btn btn-primary" [routerLink]="['/detailfilm', trend[0].id]">En savoir plus</button>
+          <button class="btn btn-primary" [routerLink]="['/filmContent', trend[0].id]">Learn More</button>
         </div>
       </div>
       <div class="carousel-item">
@@ -19,7 +19,7 @@
           src="https://image.tmdb.org/t/p/original{{trend[1].backdrop_path}}" data-holder-rendered="true">
         <div class="carousel-caption d-none d-md-block">
           <h5>{{trend[1].original_title}}</h5>
-          <button class="btn btn-primary" [routerLink]="['/detailfilm', trend[1].id]">En savoir plus</button>
+          <button class="btn btn-primary" [routerLink]="['/filmContent', trend[1].id]">Learn More</button>
         </div>
       </div>
       <div class="carousel-item">
@@ -27,7 +27,7 @@
           src="https://image.tmdb.org/t/p/original{{trend[2].backdrop_path}}" data-holder-rendered="true">
         <div class="carousel-caption d-none d-md-block">
           <h5>{{trend[2].original_title}}</h5>
-          <button class="btn btn-primary" [routerLink]="['/detailfilm', trend[2].id]">En savoir plus</button>
+          <button class="btn btn-primary" [routerLink]="['/filmContent', trend[2].id]">Learn More</button>
         </div>
       </div>
     </div>
@@ -42,9 +42,9 @@
   </div>
   <div class="container">
     <div class="row" style="padding:20px">
-      <h1 style="margin:auto; padding:20px;">En ce moment au cinéma :</h1>
+      <h1 style="margin:auto; padding:20px;">New Releases :</h1>
       <div class="row">
-        <div class="col-sm-4 poster" *ngFor="let film of nowplaying" [routerLink]="['/detailfilm', film.id]">
+        <div class="col-sm-4 poster" *ngFor="let film of nowplaying" [routerLink]="['/filmContent', film.id]">
           <img src="https://image.tmdb.org/t/p/w500{{film.poster_path}}" class="img-fluid">
           <div class="middle">
             <h3>{{film.title}}</h3>

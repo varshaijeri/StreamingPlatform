@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FilmService } from '../film.service';
 
 @Component({
-  selector: 'app-affiche-film',
-  templateUrl: './affiche-film.component.html',
-  styleUrls: ['./affiche-film.component.css']
+  selector: 'app-film-cards',
+  templateUrl: './film-cards.component.html',
+  styleUrls: ['./film-cards.component.css']
 })
-export class AfficheFilmComponent implements OnInit {
+export class FilmCardsComponent implements OnInit {
 
   constructor(private filmService : FilmService) { }
   films;
@@ -15,6 +15,7 @@ export class AfficheFilmComponent implements OnInit {
     this.films = this.filmService.getFilm()
     .subscribe(data =>{
       this.films=data['results'];
+      console.log(data['results']);
     })
   }
 

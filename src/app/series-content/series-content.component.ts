@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SerieService } from '../serie.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-detail-serie',
-  templateUrl: './detail-serie.component.html',
-  styleUrls: ['./detail-serie.component.css']
+  templateUrl: './series-content.component.html',
+  styleUrls: ['./series-content.component.css']
 })
-export class DetailSerieComponent implements OnInit {
+export class SeriesContentComponent implements OnInit {
 
   id:number;
   serie;
-  constructor(private route: ActivatedRoute,private serieService: SerieService) {
+  safeURL;
+  constructor(private route: ActivatedRoute,private serieService: SerieService, private _sanitizer: DomSanitizer) {
+    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/szby7ZHLnkA");
     this.route.params
     .subscribe( params => this.id = params.id)
    }

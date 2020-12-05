@@ -5,8 +5,8 @@
       <div class="middle">
         <h3 >{{result.name || result.title }}</h3>
         <h5>{{result.vote_average}}/10</h5>
-        <button class="btn btn-primary" *ngIf="result.media_type == 'movie'" [routerLink]="['/detailfilm', result.id]">En Savoir plus</button>
-        <button class="btn btn-primary" *ngIf="result.media_type == 'tv'" [routerLink]="['/detailserie', result.id]">En Savoir plus</button>
+        <button class="btn btn-primary" *ngIf="result.media_type == 'movie'" [routerLink]="['/filmContent', result.id]">Learn more</button>
+        <button class="btn btn-primary" *ngIf="result.media_type == 'tv'" [routerLink]="['/seriesContent', result.id]">Learn more</button>
       </div>
     </div>
   </div>

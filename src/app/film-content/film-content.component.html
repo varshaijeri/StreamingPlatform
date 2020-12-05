@@ -5,8 +5,7 @@
     </div>
     <div class="col-sm-6 my-auto">
         <h1>{{film.title}}</h1>
-        <span class="badge badge-genre" *ngFor="let genre of film.genres">{{genre.name}}</span>
-        <p style="margin-top:20px;">{{film.overview}}</p>
+        <iframe width="560" height="315" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </div>

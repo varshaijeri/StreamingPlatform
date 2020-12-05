@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { SerieService } from '../serie.service';
 
 @Component({
-  selector: 'app-affiche-serie',
-  templateUrl: './affiche-serie.component.html',
-  styleUrls: ['./affiche-serie.component.css']
+  selector: 'app-series-cards',
+  templateUrl: './series-cards.component.html',
+  styleUrls: ['./series-cards.component.css']
 })
-export class AfficheSerieComponent implements OnInit {
+export class SeriesCardComponent implements OnInit {
 
   
   constructor(private serieService : SerieService) { }

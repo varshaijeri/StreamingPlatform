@@ -10,16 +10,15 @@ import { SearchService } from '../search.service';
 export class NavComponent implements OnInit {
 
   constructor(private searchService: SearchService, private router: Router, private route: ActivatedRoute) { }
+  logoName: String = '../../assets/hfi-logo-2014-2.png';
 
   onSubmit(f) {
-    console.log('param : ' + f)
     location.reload();
     this.router.navigate(['search/' + f.value.search])
       .then(() => {
         window.location.reload();
       });
   }
-
   ngOnInit() {
   }
 
